@@ -1,0 +1,291 @@
+/*GENERAL STYLES */
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.mb_20 {
+    margin-bottom: 20px!important;
+}
+
+.header_main_div {
+    position: relative;
+}
+
+.football_header__block {
+    justify-content: start;
+    padding: 50px 30px 0;
+}
+
+.football_header__div {
+    justify-content: start;
+    -webkit-padding-start: calc(20% - 20px);
+    margin-bottom: 10px;
+    padding-top: 100px;
+}
+
+.football_logo {
+    width: 80px;
+    margin-right:20px;
+}
+
+.football_h1 {
+    font-size: 60px;
+    color: var(--main-blue);
+    margin: 0;
+}
+
+.football_btn__block {
+    justify-content: start;
+    background-color: var(--main-blue);
+    padding: 20px 0;
+}
+
+.football_descr__block {
+
+}
+
+.football_header_btn__block {
+    padding: 0 30px;
+    -webkit-padding-start: 20%;
+}
+
+.rent_button {
+    width: 300px;
+    padding: 15px 10px;
+    color: #fff;
+    background-color: red;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.rent_button:hover {
+    transition: .7s;
+    scale: 1.05;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+
+
+
+
+
+
+.football_header_desc__block {
+    padding: 20px 30px 0;
+    -webkit-padding-start: 20%;
+    width: 50%;
+}
+
+.football_header_descr {
+    margin: 0;
+    color: var(--main-blue);
+    font-size: 22px;
+}
+
+.football_advantages__div {
+    justify-content: start;
+}
+
+.football_advant__div {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.arrow_image {
+    width: 50px;
+}
+
+.header_footbaler__div {
+    position: absolute;
+    top: 20px;
+    left: 65%;
+}
+
+.header_footbaler_img {
+    height: 550px;
+    transition: .7s;
+}
+
+/**************************** SCHEMA BLOCK ****************************/
+.schema__block {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.schema_header {
+    text-align: center;
+    margin: 20px auto;
+    color: var(--main-blue);
+    max-width: 900px;
+    font-size: 24px;
+}
+
+.schema_div {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.schema_img {
+    width: 100%;
+}
+
+/**************************** ADVANTAGES BLOCK ****************************/
+.advantages__block {
+    padding: 30px 0;
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advantages_header {
+    text-align: center;
+    margin: 20px auto;
+    color: #fff;
+    max-width: 900px;
+    font-size: 24px;
+}
+
+.advantages__div {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 50px 0;
+    gap: 30px;
+}
+
+.advantage_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 9);
+    padding: 30px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.advantage_card:hover {
+    scale: 1.1;
+}
+
+.card_icon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.card_descr {
+    color: var(--main-blue);
+    font-size: 20px;
+    text-align: center;
+}
+
+.faq_form_div {
+    justify-content: start;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.faq_label {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.faq_input {
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-blue);
+}
+
+.faq_textarea {
+    resize: none;
+    height: 100px;
+}
+
+.submit_btn__div {
+    justify-content: center;
+}
+
+.faq_form_btn {
+    font-size: 20px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    background-color: var(--main-blue);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    transition: .7s;
+}
+
+.faq_form_btn:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.success_msg {
+    text-align: center;
+    color: red;
+    font-size: 22px;
+    margin: 0;
+}
+
+.photos_descr_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.photos_btn_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.photos_btn {
+    width: 290px;
+    padding: 20px;
+    border: navajowhite;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.photos_btn:hover {
+    scale: 1.1;
+}
+
+@media only screen and (max-width: 1080px) {
+
+}
+
+@media only screen and (max-width: 860px) {
+
+}
+
+@media only screen and (max-width: 680px) {
+
+}
+
+@media only screen and (max-width: 540px) {
+
+}

@@ -1,0 +1,254 @@
+* {
+    font-family: "Roboto", Arial, sans-serif !important;
+}
+
+.footer_menu__footer {
+    width: 100%;
+    background-color: var(--main-blue);
+    padding: 20px 0;
+}
+
+.main_footer__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer_top_menu__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-bottom: 50px;
+}
+
+.footer_menu__div {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_menu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_menu__item {
+    padding: 10px;
+}
+
+.footer_menu__item_link {
+    font-family: "Roboto", Arial, sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration-line: none;
+}
+
+.footer_menu__item_link:hover {
+    text-decoration: underline;
+    transition: .7s;
+}
+
+
+
+
+
+
+.footer_logo__div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo_top__div {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_company__div {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-right: 30px;
+}
+
+.footer__title {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Roboto", Arial, sans-serif !important;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.partners_logo__div, .creator_logo__div {
+    display: flex;
+    flex-direction: column;
+}
+
+.creator_logo__div {
+    align-items: end;
+}
+
+.partner_logo {
+    width: 100%;
+}
+
+.partners_logo__link {
+    margin-bottom: 30px;
+}
+
+.partners_logo__link:lst-child {
+    margin-bottom: 0px;
+}
+
+.partner_logo_short {
+    width: 100%;
+}
+
+.partner_logo_short:hover, .partner_logo:hover, .created_by_logo:hover {
+    transition: .7s;
+    scale: 1.1;
+}
+
+
+.footer_partner__div {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-right: 100px;
+}
+
+.logo_bottom__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.footer_created__div {
+    align-items: end;
+}
+
+.created_by_logo {
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer_additional__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: start;
+    align-items: start;
+}
+
+.copyright__p {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+}
+
+.email__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.email_label {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.email_link {
+    color: #fff;
+}
+
+.footer_social_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    text-align: end;
+}
+
+.socia_links_list {margin: 0;padding: 0;list-style: none;justify-content: end;display: flex;flex-direction: row;}
+.footer_social_li {margin-right: 10px;}
+.social_icon {width: 30px;}
+
+
+
+@media only screen and (max-width: 1080px) {
+    .footer_menu__footer {
+        padding: 20px;
+        width: calc(100% - 39px);
+    }
+}
+
+@media only screen and (max-width: 860px) {
+
+}
+
+@media only screen and (max-width: 680px) {
+    .logo_top__div {
+        flex-direction: column;
+    }
+
+    .footer_partner__div, .footer_company__div {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .created_by_logo {
+        width: 100%;
+    }
+
+    .created_by_logo, .partner_logo, .partner_logo_short {
+        max-width: 200px;
+    }
+
+    .partners_logo__link, .partners_logo__div, .footer__title {
+        text-align: center;
+    }
+
+    .footer_menu__div {
+        justify-content: start;
+    }
+
+
+}
+
+@media only screen and (max-width: 540px) {
+
+}

@@ -1,0 +1,139 @@
+{% extends "basic.html" %}
+
+{% block title %}
+    <title>
+        {{ names.title }}
+    </title>
+{% endblock %}
+
+{% block static %}
+    {% load static %}
+    {% load compress %}
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% endcompress %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="main_body">
+        <div class="header__block">
+            <div class="h_descr__div">
+                <h1 class="header">
+                    {{ names.header }}
+                </h1>
+
+                <div class="header_descr__div">
+                    <p class="header_descr">
+                        {{ names.header_slogan }}
+                    </p>
+                </div>
+
+                <div class="header_rent__div">
+                    <button class="header_rent_btn" onclick="clickToRent();">
+                        {{ names.header_button }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="header__logo">
+                <img src="/media/logo.png" class="header_logo__image">
+            </div>
+            <img class="the_post_background" src="/media/the_post.png"/>
+        </div>
+
+        <div class="advantages__block">
+            <h2 class="advantages_header">{{ names.advantages_title }}</h2>
+            <div class="advantages__div">
+                <div class="advantage_card">
+                    <img src="/media/advantages/datepicker.svg" class="card_icon"/>
+                    <p class="card_descr">{{ names.datepicker_card }}</p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/media/advantages/geo.svg" class="card_icon"/>
+                    <p class="card_descr">{{ names.geo_card }}</p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/media/advantages/car.svg" class="card_icon"/>
+                    <p class="card_descr">{{ names.car_card }}</p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/media/advantages/metro.svg" class="card_icon"/>
+                    <p class="card_descr">{{ names.metro_card }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sports__block" id="rent">
+            <h2 class="sport_header">{{ names.sport_title }}</h2>
+            <div class="sport_card_block">
+                <div class="sports__div" onclick="redirectToFootball();">
+                    <div class="sport_img__div">
+                        <img class="sport_img" src="/media/football_image.png"/>
+                    </div>
+                    <div class="sport_descr_div">
+                        <p class="sport_descr_label">{{ names.football_label }}</p>
+                    </div>
+                </div>
+                <div class="sports__div" onclick="redirectToBasketball();">
+                    <div class="sport_img__div">
+                        <img class="sport_img" src="/media/basketball_image.png"/>
+                    </div>
+                    <div class="sport_descr_div">
+                        <p class="sport_descr_label">{{ names.basketball_label }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="history__block">
+            <div class="history_content_block">
+                <div class="photo_swiper_div">
+                    <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
+                        {% for photo in photos %}
+                            <swiper-slide>
+                                <img src="{{photo}}"/>
+                            </swiper-slide>
+                        {% endfor %}
+                    </swiper-container>
+                    <swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="8" free-mode="true" watch-slides-progress="true">
+                        {% for photo in photos %}
+                            <swiper-slide>
+                                <img src="{{photo}}"/>
+                            </swiper-slide>
+                        {% endfor %}
+                    </swiper-container>
+                </div>
+                <div class="history_descr_div">
+                    <h2 class="history_header">{{ names.history_title }}</h2>
+                    <p class="history_descr">{{ names.history_text }}</p>
+                    <div class="history_btn_div">
+                        <button class="history_btn" onclick="redirectToHistory();">{{ names.history_more }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map__block" id="map">
+            <h2 class="map_header">{{ names.map_title }}</h2>
+            <div class="map__div">
+                <p class="foot_way_label">{{ names.foot_label }}</p>
+                <p class="foot_way_descr">{{ names.metro_descr }}</p>
+                <div class="map_frame__div">
+                    <iframe class="map_frame" src="https://yandex.ru/map-widget/v1/?ll=37.562216%2C55.712704&mode=routes&rtext=55.711809%2C37.561097~55.713908%2C37.563616&rtt=pd&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D103660942656&z=17.14"></iframe>
+                </div>
+            </div>
+            <div class="map__div">
+                <p class="car_way_label">{{ names.car_label }}</p>
+                <p class="car_way_descr">{{ names.car_descr_1 }}<sup>*</sup>.<br> {{ names.car_descr_2 }}</p>
+                <p class="car_way_descr"><sup>*</sup> {{ names.car_descr_3 }}</p>
+                <div class="map_frame__div">
+                    <img class="map_frame" src="/media/map.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script async src="{% static 'js/index.js' %}"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+{% endblock %}

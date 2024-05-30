@@ -1,0 +1,130 @@
+/* HISTORY_BLOCK */
+.photo__block {
+    padding: 50px 30px;
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.photo_content_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.photo_swiper_div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-right: 30px;
+    height: 100%;
+    max-height: 430px;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: sw </swiper-slidek;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+swiper-container {
+  width: 100%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper {
+  /*height: 60%;*/
+  width: 100%;
+}
+
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper2 swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+swiper-slide img {
+  display: sw </swiper-slidek;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.history_descr_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo_header {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.photo_descr {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.sport_btn_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.history_btn {
+    width: 200px;
+    padding: 10px;
+    border: navajowhite;
+    background-color: red;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.history_btn:hover {
+    scale: 1.1;
+}

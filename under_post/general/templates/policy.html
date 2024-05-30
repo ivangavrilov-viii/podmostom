@@ -1,0 +1,58 @@
+{% extends "basic.html" %}
+{% block title %}
+    <title>
+        {{ names.title }}
+    </title>
+{% endblock %}
+
+{% block static %}
+    {% load static %}
+    {% load compress %}
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/history.css' %}">
+    {% endcompress %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="main_body">
+        <div class="header__block">
+            <div class="h_descr__div">
+                <h1 class="header">
+                    {{ names.header }}
+                </h1>
+            </div>
+
+            <div class="header__logo">
+                <img src="/media/logo.png" class="header_logo__image">
+            </div>
+            <img class="the_post_background" src="/media/the_post.png"/>
+        </div>
+
+        <div class="policy__block">
+            <h2 class="policy_header">{{ names.map_title }}</h2>
+            <p class="policy_text">
+                {{ names.text_1 }}
+            </p>
+            <p class="policy_text">
+                {{ names.text_2 }}
+            </p>
+            <p class="policy_text">
+                {{ names.text_3 }}
+            </p>
+            <p class="policy_text">
+                {{ names.text_4 }}
+            </p>
+            <p class="policy_text">
+                {{ names.text_5 }}
+            </p>
+            <p class="policy_text">
+                {{ names.text_6 }}
+            </p>
+            <p class="policy_text">
+                {{ names.text_7 }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

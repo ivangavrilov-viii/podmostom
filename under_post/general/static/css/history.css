@@ -1,0 +1,36 @@
+swiper-container {
+  height: 500px!important;
+}
+
+.mySwiper2 {
+  height: 150px!important;
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+    .history_photo__block {
+        width: calc(100% - 40px);
+        padding: 30px 20px;
+    }
+
+    .policy_text {
+        width: calc(100% - 60px);
+    }
+}
+
+
+@media only screen and (max-width: 680px) {
+    .mySwiper2 {
+        height: 100px !important;
+    }
+
+    .header {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .h_descr__div {
+        padding: 20px!important;
+    }
+}

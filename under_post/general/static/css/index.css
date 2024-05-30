@@ -1,0 +1,557 @@
+:root {
+    --swiper-navigation-color: #122941;
+    --swiper-pagination-color: #122941;
+}
+
+.main_body {
+    /*padding: 20px;*/
+}
+
+.header__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 50px 0;
+    position: relative;
+}
+
+.h_descr__div {
+    width: 50%;
+    padding: 50px 70px 0;
+}
+
+.header {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--main-blue);
+}
+
+.header_descr__div {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--main-blue);
+}
+
+.header_descr {
+    margin: 0;
+}
+
+.header_rent__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.header_rent_btn {
+    width: 250px;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header_rent_btn:hover {
+    transition: .7s;
+    scale: 1.05;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+.header__logo {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header_logo__image {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+}
+
+.the_post_background {
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 40px);
+    top: 400px;
+    left: -40px;
+}
+
+
+/*ADVANTAGES BLOCK*/
+.advantages__block {
+    padding: 30px 0;
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advantages_header {
+    text-align: center;
+    margin: 20px auto;
+    color: #fff;
+    max-width: 900px;
+    font-size: 24px;
+}
+
+.advantages__div {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 50px 0;
+    gap: 30px;
+}
+
+.advantage_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 9);
+    padding: 30px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.advantage_card:hover {
+    scale: 1.1;
+}
+
+.card_icon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.card_descr {
+    color: var(--main-blue);
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/*SPORTS BLOCK*/
+.sports__block {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.sport_header, .map_header, .policy_header {
+    text-align: center;
+    margin: 20px auto;
+    color: var(--main-blue);
+    max-width: 900px;
+    font-size: 24px;
+}
+
+.sport_card_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sports__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 4px solid var(--main-blue);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.sports__div:hover {
+    scale: 1.05;
+}
+
+.sports__div:hover .sport_img {
+    scale: 1.1;
+}
+
+.sport_img__div {
+    padding-bottom: 10px;
+}
+
+.sport_img {
+    height: 350px;
+    transition: .7s;
+}
+
+.sport_descr_div {
+    width: 100%;
+    border-top: 4px solid var(--main-blue);
+}
+
+.sport_descr_label {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+    padding: 10px 0 0;
+    color: var(--main-blue);
+}
+
+
+
+/* HISTORY_BLOCK */
+.history__block {
+    padding: 50px 30px;
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.history_content_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.photo_swiper_div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-right: 30px;
+    height: 100%;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: sw </swiper-slidek;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+swiper-container {
+  width: 100%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper {
+  /*height: 60%;*/
+  width: 100%;
+}
+
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper2 swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+swiper-slide img {
+  display: sw </swiper-slidek;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.history_descr_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.history_header {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.history_descr {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.history_btn_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.history_btn {
+    width: 200px;
+    padding: 10px;
+    border: navajowhite;
+    background-color: red;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.history_btn:hover {
+    scale: 1.1;
+}
+
+
+
+
+/* MAP BLOCK */
+.map__block {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.map__div {
+    height: 700px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 40px;
+}
+
+.map__div:last-child {
+    margin-bootom: 0;
+}
+
+.foot_way_label, .car_way_label {
+    margin: 0;
+    font-size: 18px;
+    color: var(--main-blue);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.foot_way_descr, .car_way_descr {
+    margin: 0;
+    font-size: 18px;
+    color: var(--main-blue);
+    font-weight: 400;
+    margin-bottom: 20px;
+    width: 50%;
+    min-width: 300px;
+}
+
+.car_way_label, .car_way_descr {
+    /*text-align: end;*/
+}
+
+.map_frame__div {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.map_frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*********************************** HISTORY PAGE ********************************************/
+.history__div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 0 auto;
+    padding: 50px 0;
+    gap: 30px;
+    max-width: 1200px;
+}
+
+.history__text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.history_photo__block {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.history_photo_swiper_div {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*********************************** POLICY PAGE ********************************************/
+.policy__block {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #fff;
+}
+
+.policy_text {
+    width: 100%;
+    max-width: 1200px;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 0 30px;
+    color: var(--main-blue);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .history__block {
+        width: calc(100% - 59px);
+    }
+
+
+    .advantages__block {
+        width: calc(101%);
+    }
+
+    .history_content_block {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .photo_swiper_div {
+        margin: 0;
+        width: 100%;
+    }
+
+    .sports__div {
+        width: 300px;
+    }
+
+    .header_logo__image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .header__block {
+        padding: 30px 0;
+    }
+
+    .h_descr__div {
+        padding: 0 70px 0;
+    }
+
+    .the_post_background {
+        top: 350px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .advantages__block {
+        width: calc(100% - 59px);
+    }
+
+    .sports__div {
+        width: 250px;
+    }
+
+    .advantages__block {
+        padding: 30px;
+    }
+
+    .advantages__div {
+        flex-wrap: wrap;
+    }
+
+    .advantage_card {
+        min-width: 200px;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .h_descr__div {
+        padding: 30px 70px;
+        width: 100%;
+    }
+
+    .map__div {
+        height: auto;
+    }
+
+    .map_frame {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .sports__div:first-child {
+        margin-bottom: 20px;
+    }
+
+    .the_post_background {
+        top: 400px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .h_descr__div {
+        padding: 30px;
+    }
+
+    .the_post_background {
+        top: 450px;
+    }
+}

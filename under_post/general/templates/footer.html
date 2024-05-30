@@ -1,0 +1,115 @@
+{% load static %}
+{% block footer %}
+    <footer class="footer_menu__footer" id="footer">
+        <div class="main_footer__div">
+            <div class="footer_top_menu__div">
+                <div class="footer_menu__div">
+                    <ul class="footer_menu__list">
+                        <li class="footer_menu__item">
+                            <a class="footer_menu__item_link green_hover" href="/football/">
+                                Футбол
+                            </a>
+                        </li>
+                        <li class="footer_menu__item">
+                            <a class="footer_menu__item_link red_hover" href="/basketball/">
+                                Баскетбол
+                            </a>
+                        </li>
+                        <li class="footer_menu__item">
+                            <a class="footer_menu__item_link yellow_hover" href="/#rent">
+                                Аренда
+                            </a>
+                        </li>
+                        <li class="footer_menu__item">
+                            <a class="footer_menu__item_link orange_hover" href="/#footer">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer_menu__item">
+                            <a class="footer_menu__item_link" href="/#map">
+                                Как добраться ?
+                            </a>
+                        </li>
+                        <li class="footer_menu__item">
+                            <a class="footer_menu__item_link" href="/policy/">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer_logo__div">
+                    <div class="logo_top__div">
+                        <div class="footer_partner__div">
+                            <p class="footer__title">
+                                Партнёры
+                            </p>
+                            <div class="partners_logo__div">
+                                <a class="partners_logo__link" href="https://sport.mos.ru/" target="_blank">
+                                    <img class="partner_logo_short" src="/media/mos_sport.svg" alt="MOS_SPORT"/>
+                                </a>
+                                <a class="partners_logo__link" href="https://meteorfootball.ru/" target="_blank">
+                                    <img class="partner_logo_short" src="/media/meteor_logo.svg" alt="METEOR"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer_company__div">
+                            <p class="footer__title">Управляющая компания</p>
+                            <a class="partners_logo__link" href="https://streetbasket.ru/" target="_blank">
+                                <img class="partner_logo" src="/media/streetbasket_logo.png" alt="MOS_SPORT"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="logo_bottom__div">
+                        <div class="footer_created__div">
+                            <a class="creator_logo__div" href="https://t.me/gavril_23" target="_blank">
+                                <img class="created_by_logo" src="/media/Gavrilov.svg" alt="Created by Ivan Gavrilov"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_additional__div">
+                <div class="copyright__div">
+                    <p class="copyright__p">© ПодМостом - Спортивное пространство</p>
+                </div>
+                <div class="footer_social_links">
+                    <div class="email__div">
+                        <p class="email_label">Email: <a href="mailto:podmostom.msk@gmail.com" class="email_link">podmostom.msk@gmail.com</a></p>
+                    </div>
+                    <ul class="socia_links_list">
+                        <li class="footer_social_li" onmouseover="changeYoutubeIcon()" onmouseout="returnYoutubeIcon()">
+                            <a href="https://www.youtube.com/user/streetbasketrussia" target="_blank">
+                                <img class="social_icon" id="youtube_icon" width="30" height="30" src="/media/footer_icons/youtube.svg" alt="Youtube icon"/>
+                            </a>
+                        </li>
+                        <li class="footer_social_li" onmouseover="changeVkIcon()" onmouseout="returnVkIcon()" >
+                            <a href="https://vk.com/streetbasketrussia" target="_blank">
+                                <img class="social_icon" id="vk_icon" width="30" height="30" src="/media/footer_icons/vk.svg" alt="Vk icon"/>
+                            </a>
+                        </li>
+                        <li class="footer_social_li" onmouseover="changeTelegramIcon()" onmouseout="returnTelegramIcon()">
+                            <a href="https://t.me/streetbasketrussia" target="_blank">
+                                <img class="social_icon" id="telegram_icon" width="30" height="30" src="/media/footer_icons/telegram.svg" alt="Telegram icon"/>
+                            </a>
+                        </li>
+                        <li class="footer_social_li" onmouseover="changeGmailIcon()" onmouseout="returnGmailIcon()">
+                            <a href="mailto:podmostom.msk@gmail.com">
+                                <img class="social_icon" id="gmail_icon" width="30" height="30" src="/media/footer_icons/gmail.svg" alt="Gmail icon"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% block js %}
+        {% load compress %}
+        {% compress js %}
+            <script async src="{% static 'js/flatinn_footer.js' %}"></script>
+        {% endcompress %}
+    {% endblock %}
+{% endblock %}

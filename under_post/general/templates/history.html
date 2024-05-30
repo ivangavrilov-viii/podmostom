@@ -1,0 +1,78 @@
+{% extends "basic.html" %}
+{% block title %}
+    <title>
+        {{ names.title }}
+    </title>
+{% endblock %}
+
+{% block static %}
+    {% load static %}
+    {% load compress %}
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/history.css' %}">
+    {% endcompress %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="main_body">
+        <div class="header__block">
+            <div class="h_descr__div">
+                <h1 class="header">
+                    {{ names.header }}
+                </h1>
+
+                <div class="header_descr__div">
+                    <p class="header_descr">
+                        {{ names.header_slogan }}
+                    </p>
+                </div>
+
+                <div class="header_rent__div">
+                    <button class="header_rent_btn" onclick="window.location = '/#rent'">
+                        {{ names.header_button }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="header__logo">
+                <img src="/media/logo.png" class="header_logo__image">
+            </div>
+            <img class="the_post_background" src="/media/the_post.png"/>
+        </div>
+
+        <div class="advantages__block">
+            <h2 class="advantages_header">{{ names.history_title }}</h2>
+            <div class="history__div">
+                <p class="history__text">
+                    {{ names.history_text_1 }}
+                </p>
+                <p class="history__text">
+                    {{ names.history_text_2 }}
+                </p>
+            </div>
+        </div>
+
+        <div class="history_photo__block">
+            <div class="history_photo_swiper_div">
+                <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
+                    {% for photo in photos %}
+                        <swiper-slide>
+                            <img src="{{photo}}"/>
+                        </swiper-slide>
+                    {% endfor %}
+                </swiper-container>
+                <swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="6" free-mode="true" watch-slides-progress="true">
+                    {% for photo in photos %}
+                        <swiper-slide>
+                            <img src="{{photo}}"/>
+                        </swiper-slide>
+                    {% endfor %}
+                </swiper-container>
+            </div>
+        </div>
+    </div>
+
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block title %} {% endblock %}
+        {% block meta %} {% endblock %}
+
+        {% block css %}
+            {% load compress %}
+            {% compress css %}
+                <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+                <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+            {% endcompress %}
+        {% endblock %}
+    </head>
+
+    <body>
+        {% include 'navigation.html' %}
+        <main class="main" id="body">
+            {% block body %}
+
+            {% endblock %}
+        </main>
+        {% include 'footer.html' %}
+    </body>
+    {% block static %}{% endblock %}
+</html>

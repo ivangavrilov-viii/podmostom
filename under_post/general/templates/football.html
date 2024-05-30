@@ -1,0 +1,191 @@
+{% extends "basic.html" %}
+
+{% block title %}
+    <title>
+        {{ names.title }}
+    </title>
+{% endblock %}
+
+{% block static %}
+    {% load static %}
+    {% load compress %}
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'css/football.css' %}">
+        <link rel="stylesheet" href="{% static 'css/photo_sport_block.css' %}">
+    {% endcompress %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="main_body">
+        <div class="header_main_div">
+            <div class="football_header__block flex_column">
+                <div class="football_header__div flex_row">
+                    <img class="football_logo" src="/media/logo.png"/>
+                    <h1 class="football_h1">
+                        {{names.header}}
+                    </h1>
+                </div>
+            </div>
+
+            <div class="football_btn__block flex_column">
+                <div class="football_header_btn__block flex_column">
+                    <a class="rent_button" data-toggle="fs-booking" data-playground="4274">
+                        {{names.book_filed_btn}}
+                    </a>
+                </div>
+            </div>
+
+            <div class="header_footbaler__div">
+                <img class="header_footbaler_img" src="/media/footballer.png">
+            </div>
+        </div>
+
+        <div class="football_descr__block flex_column">
+            <div class="football_header_desc__block flex_column">
+                <p class="football_header_descr mb_20">
+                    {{names.header_descr}}
+                </p>
+                <div class="football_advantages__div flex_column">
+                    <div class="football_advant__div flex_row">
+                        <img class="arrow_image" src="/media/arrow.svg"/>
+                        <p class="football_header_descr">
+                            {{names.header_descr_1}}
+                        </p>
+                    </div>
+
+                    <div class="football_advant__div flex_row">
+                        <img class="arrow_image" src="/media/arrow.svg"/>
+                        <p class="football_header_descr">
+                            {{names.header_descr_2}}
+                        </p>
+                    </div>
+
+                    <div class="football_advant__div flex_row">
+                        <img class="arrow_image" src="/media/arrow.svg"/>
+                        <p class="football_header_descr">
+                            {{names.header_descr_3}}
+                        </p>
+                    </div>
+                </div>
+                <p class="football_header_descr mb_20">
+                    {{names.header_descr_4}}
+                </p>
+
+                <p class="football_header_descr mb_20">
+                    {{names.header_descr_5}}
+                </p>
+            </div>
+        </div>
+
+        <div class="photo__block">
+            <div class="photo_content_block">
+                <div class="photo_swiper_div">
+                    <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
+                        {% for photo in photos %}
+                            <swiper-slide>
+                                <img src="{{photo}}"/>
+                            </swiper-slide>
+                        {% endfor %}
+                    </swiper-container>
+                    <swiper-container class="mySwiper2" loop="true" space-between="10" slides-per-view="6" free-mode="true" watch-slides-progress="true">
+                        {% for photo in photos %}
+                            <swiper-slide>
+                                <img src="{{photo}}"/>
+                            </swiper-slide>
+                        {% endfor %}
+                    </swiper-container>
+                </div>
+                <div class="photos_descr_div">
+                    <h2 class="photo_header">{{ names.photos_title }}</h2>
+                    <p class="photo_descr">{{ names.photos_descr }}</p>
+                    <div class="sport_btn_div">
+                        <a class="rent_button" data-toggle="fs-booking" data-playground="4274">
+                            {{names.book_filed_btn}}
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="schema__block">
+            <h2 class="schema_header">{{names.schema_title}}</h2>
+            <div class="schema_div">
+                <img class="schema_img" src="/media/schema_sport.jpg"/>
+            </div>
+        </div>
+
+        <div class="advantages__block">
+            <h2 class="advantages_header">{{names.advantages_title}}</h2>
+            <div class="advantages__div">
+                <div class="advantage_card">
+                    <img src="/media/advantages/datepicker.svg" class="card_icon"/>
+                    <p class="card_descr">{{names.datepicker_card}}</p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/media/advantages/geo.svg" class="card_icon"/>
+                    <p class="card_descr">{{names.geo_card}}</p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/media/advantages/car.svg" class="card_icon"/>
+                    <p class="card_descr">{{names.car_card}}</p>
+                </div>
+                <div class="advantage_card">
+                    <img src="/media/advantages/metro.svg" class="card_icon"/>
+                    <p class="card_descr">{{names.metro_card}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="schema__block" id="faq" >
+            <h2 class="schema_header">{{names.faq_title}}</h2>
+            <div class="faq_form_div flex_column">
+                <form method="post" name="faq_form" id="faq_form">
+                    {% csrf_token %}
+                    <p class="faq_label">
+                        {{names.faq_name_label}}
+                    </p>
+                    <input type="text" class="faq_input" required name="full_name"  placeholder="{{names.faq_name_placeholder}}"/>
+                    <p class="faq_label">
+                        {{names.faq_phone_label}}
+                    </p>
+                    <input type="tel" class="faq_input" required name="phone" pattern="\+[0-9]{10,15}" placeholder="{{names.faq_phone_placeholder}}" maxlength="12"/>
+                    <p class="faq_label">
+                        {{names.faq_email_label}}
+                    </p>
+                    <input type="email" class="faq_input" required name="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="{{names.faq_email_placeholder}}"/>
+                    <p class="faq_label">
+                        {{names.faq_text_label}}
+                    </p>
+                    <textarea class="faq_input faq_textarea" required name="text" placeholder="{{names.faq_text_placeholder}}"></textarea>
+                    <div class="submit_btn__div flex_row">
+                        <button type="submit" class="faq_form_btn">
+                            {{names.faq_btn}}
+                        </button>
+                    </div>
+                    {% if success_send %}
+                        <p class="success_msg" id="success_label">
+                            {{names.success_message}}
+                        </p>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script async src="//widget-playground-static.findsport.ru/v1_0/js/fs.api.js" type="text/javascript"></script>
+    <script async>
+        function focusSuccess() {
+            let elem = document.getElementById("success_label");
+            let faq_elem = document.getElementById("faq");
+
+            if (elem) {
+                faq_elem.focus();
+            }
+        }
+
+        focusSuccess();
+    </script>
+{% endblock %}
