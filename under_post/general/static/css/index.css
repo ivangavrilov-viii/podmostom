@@ -544,6 +544,10 @@ swiper-slide img {
     .the_post_background {
         top: 400px;
     }
+
+    .history_descr {
+        text-align: start;
+    }
 }
 
 @media only screen and (max-width: 540px) {
