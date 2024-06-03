@@ -212,7 +212,7 @@
 @media only screen and (max-width: 1080px) {
     .footer_menu__footer {
         padding: 20px;
-        width: calc(100% - 39px);
+        width: calc(100% - 40px);
     }
 }
 

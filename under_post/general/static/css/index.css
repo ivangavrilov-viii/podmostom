@@ -457,7 +457,7 @@ swiper-slide img {
 
 @media only screen and (max-width: 1080px) {
     .history__block {
-        width: calc(100% - 59px);
+        width: calc(100% - 60px);
     }
 
 
@@ -499,7 +499,7 @@ swiper-slide img {
 
 @media only screen and (max-width: 860px) {
     .advantages__block {
-        width: calc(100% - 59px);
+        width: calc(100% - 60px);
     }
 
     .sports__div {
