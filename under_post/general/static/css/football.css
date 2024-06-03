@@ -109,7 +109,7 @@
 }
 
 .header_footbaler_img {
-    height: 550px;
+    height: 450px;
     transition: .7s;
 }
 
@@ -206,7 +206,7 @@
 
 .faq_input {
     margin-bottom: 30px;
-    width: 100%;
+    width: calc(100% - 44px);
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 5px;
@@ -274,18 +274,77 @@
     scale: 1.1;
 }
 
-@media only screen and (max-width: 1080px) {
 
+@media only screen and (max-width: 1280px) {
+    .header_footbaler_img {
+        height: 350px;
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .header_footbaler_img {
+        height: 300px;
+    }
 }
 
 @media only screen and (max-width: 860px) {
+    .header_footbaler_img {
+        height: 250px;
+    }
 
+    .football_header_desc__block {
+        padding: 20px 30px 0;
+        width: calc(100% - 60px);
+    }
+
+    .photo_content_block {
+        flex-direction: column!important;
+    }
+
+    .photo_swiper_div {
+        width: 100%!important;
+        margin-right: 0!important;
+        margin-bottom: 20px!important;
+    }
+
+    .advantages__block {
+        padding: 30px;
+        width: calc(100% - 60px);
+    }
+
+    .advantages__div {
+        flex-wrap: wrap;
+    }
+
+    .advantage_card {
+        min-width: 200px;
+    }
 }
 
 @media only screen and (max-width: 680px) {
+    .header_footbaler_img {
+        /*height: 250px;*/
+    }
 
+    .header_footbaler__div {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 540px) {
+    .football_header__div {
+        -webkit-padding-start: 0;
+    }
 
+    .football_h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .football_header_btn__block {
+        padding: 0;
+        align-items: center;
+    }
 }
