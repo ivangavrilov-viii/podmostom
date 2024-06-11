@@ -1,5 +1,29 @@
 from django.shortcuts import render
 import general.names as names_file
+from decouple import config
+import smtplib
+import os
+
+
+gmail_user = config('email_from')
+gmail_password = config('email_from_password')
+gmail_to = config('email_to')
+
+
+def mail(to, subject, text):
+    msg['From'] = gmail_user
+    msg['To'] = to
+    msg['Subject'] = subject
+
+    # инициализируем smtp сервер и отправляем письмо
+    # инициализируем smtp сервер и отправляем письмо
+    mailServer = smtplib.SMTP("smtp.gmail.com", 587)
+    mailServer.ehlo()
+    mailServer.starttls()
+    mailServer.ehlo()
+    mailServer.login(gmail_user, gmail_pwd)
+    mailServer.sendmail(gmail_user, to, msg.as_string())
+    mailServer.close()
 
 
 def index(request):
@@ -28,8 +52,6 @@ def football_view(request):
         photo_list.append(f"/media/football_circle_photos/{index + 1}.JPG")
 
     if request.method == 'POST':
-        email_to_send = 'podmostom.msk@gmail.com'
-        email_from = 'nikityuk.info@gmail.com'
         success_send = True
 
     context = {

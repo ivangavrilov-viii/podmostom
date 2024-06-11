@@ -217,7 +217,9 @@
 }
 
 @media only screen and (max-width: 860px) {
-
+    .partner_logo_short, .partner_logo, .created_by_logo {
+        width: 60%;
+    }
 }
 
 @media only screen and (max-width: 680px) {
@@ -231,11 +233,15 @@
     }
 
     .created_by_logo {
-        width: 100%;
+        width: 80%;
     }
 
     .created_by_logo, .partner_logo, .partner_logo_short {
         max-width: 200px;
+    }
+
+
+        text-align: ;
     }
 
     .partners_logo__link, .partners_logo__div, .footer__title {
