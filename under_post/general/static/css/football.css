@@ -212,7 +212,10 @@
     padding: 10px 20px;
     border-radius: 5px;
     border: 2px solid var(--main-blue);
+    outline: none;
 }
+
+.faq_input:active, .faq_input:focus {border: 2px solid red;}
 
 .faq_textarea {
     resize: none;
@@ -228,15 +231,15 @@
     width: 200px;
     padding: 10px 20px;
     margin: 0 auto;
-    background-color: var(--main-blue);
+    background-color: red;
     color: #fff;
     border-radius: 5px;
     border: none;
     margin-bottom: 20px;
-    transition: .7s;
 }
 
 .faq_form_btn:hover {
+    transition: .7s;
     scale: 1.1;
     cursor: pointer;
 }
@@ -268,10 +271,10 @@
     font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: .7s;
 }
 
 .photos_btn:hover {
+    transition: .7s;
     scale: 1.1;
 }
 

@@ -1,29 +1,35 @@
 from django.shortcuts import render
 import general.names as names_file
-from decouple import config
+# from decouple import config
 import smtplib
 import os
 
-
-gmail_user = config('email_from')
-gmail_password = config('email_from_password')
-gmail_to = config('email_to')
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 
-def mail(to, subject, text):
-    msg['From'] = gmail_user
-    msg['To'] = to
-    msg['Subject'] = subject
+# gmail_user = config('email_from')
+# gmail_password = config('email_from_password')
+# gmail_to = config('email_to')
 
-    # инициализируем smtp сервер и отправляем письмо
-    # инициализируем smtp сервер и отправляем письмо
-    mailServer = smtplib.SMTP("smtp.gmail.com", 587)
-    mailServer.ehlo()
-    mailServer.starttls()
-    mailServer.ehlo()
-    mailServer.login(gmail_user, gmail_pwd)
-    mailServer.sendmail(gmail_user, to, msg.as_string())
-    mailServer.close()
+
+# smtp_server = smtplib.SMTP("smtp.gmail.com", 25)
+# smtp_server.starttls()
+# smtp_server.login("gavrilovivan2001@gmail.com", "55JolP-eRnq-08")
+
+
+def mail(email_to, subject, text):
+
+    # https://support.google.com/a/answer/2956491?sjid=4983347348702673248-EU
+    msg = MIMEMultipart()
+
+    msg["From"] = "gavrilovivan2001@gmail.com"
+    msg["To"] = email_to
+    msg["Subject"] = subject
+
+    msg.attach(MIMEText(text, "plain"))
+    smtp_server.sendmail("gavrilovivan2001@gmail.com", "gavrilovivan008@gmail.com", msg.as_string())
+    smtp_server.quit()
 
 
 def index(request):
@@ -53,6 +59,7 @@ def football_view(request):
 
     if request.method == 'POST':
         success_send = True
+        mail("gavrilovivan008@gmail.com", "Тестовое письмо", "Привет! Это тестовое письмо, отправленное с помощью Python 😊")
 
     context = {
         'names': names,
