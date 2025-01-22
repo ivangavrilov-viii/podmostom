@@ -1,35 +1,7 @@
 from django.shortcuts import render
 import general.names as names_file
-# from decouple import config
-import smtplib
+from .models import *
 import os
-
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-
-
-# gmail_user = config('email_from')
-# gmail_password = config('email_from_password')
-# gmail_to = config('email_to')
-
-
-# smtp_server = smtplib.SMTP("smtp.gmail.com", 25)
-# smtp_server.starttls()
-# smtp_server.login("gavrilovivan2001@gmail.com", "55JolP-eRnq-08")
-
-
-def mail(email_to, subject, text):
-
-    # https://support.google.com/a/answer/2956491?sjid=4983347348702673248-EU
-    msg = MIMEMultipart()
-
-    msg["From"] = "gavrilovivan2001@gmail.com"
-    msg["To"] = email_to
-    msg["Subject"] = subject
-
-    msg.attach(MIMEText(text, "plain"))
-    smtp_server.sendmail("gavrilovivan2001@gmail.com", "gavrilovivan008@gmail.com", msg.as_string())
-    smtp_server.quit()
 
 
 def index(request):
@@ -58,8 +30,19 @@ def football_view(request):
         photo_list.append(f"/media/football_circle_photos/{index + 1}.JPG")
 
     if request.method == 'POST':
-        success_send = True
-        mail("gavrilovivan008@gmail.com", "Тестовое письмо", "Привет! Это тестовое письмо, отправленное с помощью Python 😊")
+        full_name = request.POST.get('full_name', '')
+        phone = request.POST.get('phone', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('text', None)
+
+        order = Order.objects.create(
+            full_name=full_name,
+            phone=phone,
+            email=email,
+            message=message
+        )
+
+        success_send = True if order.index else False
 
     context = {
         'names': names,
@@ -78,7 +61,19 @@ def basketball_view(request):
         photo_list.append(f"/media/basketball_circle_photos/{index + 1}.JPG")
 
     if request.method == 'POST':
-        success_send = True
+        full_name = request.POST.get('full_name', '')
+        phone = request.POST.get('phone', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('text', None)
+
+        order = Order.objects.create(
+            full_name=full_name,
+            phone=phone,
+            email=email,
+            message=message
+        )
+
+        success_send = True if order.index else False
 
     context = {
         'names': names,

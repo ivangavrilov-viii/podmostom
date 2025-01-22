@@ -24,13 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t*s7rr(kqq4b*sn!jgda-*5d(jd$*rri2k19x#n83ukut+6+v7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '45.144.3.4',
+    'podmostom-moscow.ru',
 ]
 
 
@@ -84,8 +85,12 @@ WSGI_APPLICATION = 'under_post.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'podmostom_db',
+        'USER': 'podmostom',
+        'PASSWORD': 'wEF6MgLLchNt8onZCiGu6j7e',
+        'HOST': '45.144.3.4',
+        'PORT': '6432',
     }
 }
 
@@ -112,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -128,6 +133,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, "locale"),
+    os.path.join(BASE_DIR, "general/locale"),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
